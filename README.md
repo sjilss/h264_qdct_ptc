@@ -28,25 +28,27 @@ modify messages inside arbitrarily.
 For embedding, first of all, we should decode walk_cif_cover.264 into raw YUV data file. Next, compress it into a H.264 video stream 'walk_cif_stego.264' while embedding the 'meg.txt' using PTC-s.exe. 
 For extraction, We decode the 'walk_cif_stego.264' into a YUV data file while extracting the messages into the file 'ext-meg.txt'.
 
+=========================================
 
-====================================================================
 1.Compilation
 2.Code explanation
 3.command line parameters
 4.Input/Output file format
 5.Platform
 
-=====================================================================
+========================================
+
 1.Compilation
 Windows
 MS Visual C++ 2013 or later
-The 
 
 =====================================================================
+
 2.Code explanation
 (waiting for updates recently)
 
 =====================================================================
+
 3.command line parameters
 3.1 Encoder/Embedding
 Test case:
@@ -69,6 +71,7 @@ ldecod.exe -p InputFile=walk_cif.264 -p OutputFile=walk_dec.yuv -M ext-message.t
 -T temp file
 
 =====================================================================
+
 4.Input/Output file format
 For message embedding tool:
 The source video material is read from raw YUV 4:2:0 data files.
@@ -78,8 +81,8 @@ For message extraction tool:
 The source video material is an h.264 video stream.
 The output is raw YUV 4:2:0 data files..
 
-
 =====================================================================
+
 5.Platform
 (waiting for updates recently)
 
