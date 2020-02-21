@@ -23,9 +23,9 @@ Minimizing Embedding Impact for H.264 Steganography by Progressive Trellis Codin
 --meg.txt: a secret message file used for testing the tools. Users can 
 modify messages inside arbitrarily.
 
---walk_cif_cover.264: This is a H.264 video for test. 
+--walk_cif_cover.264: This is a H.264 video for test, 30 fps, qp=28,  baseline, GOP=10, 352x288.
 -quick overview of usage:
-For embedding, first of all, we should decode walk_cif_cover.264 into raw YUV data file. Next, compress it into a H.264 video stream 'walk_cif_stego.264' while embedding the 'meg.txt' using PTC-s.exe. 
+For embedding, first of all, we should decode walk_cif_cover.264 into raw YUV data file walk_cif_cover.yuv. Next, compress it into a H.264 video stream 'walk_cif_stego.264' while embedding the 'meg.txt' using PTC-s.exe. 
 For extraction, We decode the 'walk_cif_stego.264' into a YUV data file while extracting the messages into the file 'ext-meg.txt'.
 
 =========================================
