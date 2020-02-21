@@ -1,1 +1,1 @@
-ptc-s.exe --fps 30 --profile baseline --level 3.0 --threads 1 --qp 28 --keyint 10 --input-res 352x288 --tune psnr --psnr --ssim --megfile meg.txt --tempfile 2temp.txt --seq 18 --pl 3 --embytes 0 -o walk_cif.264 walk_cif.yuv
+ptc-s.exe --fps 30 --profile baseline --level 3.0 --threads 1 --qp 28 --keyint 10 --input-res 352x288 --tune psnr --psnr --ssim --megfile meg.txt --tempfile temp.txt --seq 18 --pl 3 --embytes 0 -o walk_cif_stego.264 walk_cif_cover.yuv
