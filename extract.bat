@@ -1,0 +1,1 @@
+ldecod.exe -p InputFile=walk_cif.264 -p OutputFile=walk_dec.yuv -M ext-message.txt -T messagetemp.txt
