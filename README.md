@@ -5,6 +5,8 @@ In the 1.2.20 version, we provide the practical H.264 video embedding and extrac
 If you have any question, or find bugs, no hesitate to contact the author.
 Author: Yu Wang. Email: wangyu9078@iie.ac.cn
 
+Note: from 2020-2-20 to 2020-3-1, we will continually update.
+
 (The project with full source codes will be posted upon the publication of our research).
 
 # Publication
