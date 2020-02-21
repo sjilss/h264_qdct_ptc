@@ -18,7 +18,9 @@ Minimizing Embedding Impact for H.264 Steganography by Progressive Trellis Codin
 
 --PTC-s.exe: the embedding/encoding tool.
 
---ldecode.exe: the extraction/decoding tool.
+--ldecode.exe: an ordinary H.264 decoder.
+
+--ext-PTC.exe: the extraction/decoding tool.
 
 --meg.txt: a secret message file used for testing the tools. Users can 
 modify messages inside arbitrarily.
