@@ -14,6 +14,9 @@ Minimizing Embedding Impact for H.264 Steganography by Progressive Trellis Codin
 [Not be published]
 
 <b> Files Explanation </b><br/>
+
+--PTCodes (souce folder): contains all source codes. (Before research pulicaiton/accepted, we only provide a associate/necessary revised .c files, namely encoder_p.c, which includes p_trellis_coding and restore_context functions. Besides, more .c and .h files, such as x264.c/.h, macroblock_p.c/.h, common_p.c/.h, ratecontrol_p.c/.h, etc., are revised for the implementation of PTC.)
+
 --embed.bat: contains a case of command line parameters, and double click it to run the embedding tool.
 
 --extract.bat: contains a case of command line parameters, and double click it to run the extraction tool.
