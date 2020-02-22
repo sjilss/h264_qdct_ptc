@@ -15,7 +15,9 @@ Minimizing Embedding Impact for H.264 Steganography by Progressive Trellis Codin
 
 <b> Files Explanation </b><br/>
 
---PTCodes (souce folder): contains all source codes. (Before research pulicaiton/accepted, we only provide a associate/necessary revised .c files, namely encoder_p.c, which includes p_trellis_coding and restore_context functions. Besides, more .c and .h files, such as x264.c/.h, macroblock_p.c/.h, common_p.c/.h, ratecontrol_p.c/.h, etc., are revised for the implementation of PTC.)
+--PTCodes (souce folder): contains all source codes. (Before research pulicaiton/accepted, we only provide a associate/necessary revised .c files, namely encoder_p.c, which includes ptrellis_coding, restore_context, x264_slice_write functions. If you are interested in the frame compression, look into the x264_slice_write function. If you are interested in coding contexts maintained, look into restore_context function. Last but not least, the progressive trellis coding process, that controls multiple coding contexts to expand paths, prune sub-optimal paths, match messages, and retrace short paths, is included in the ptrellis_coding function. Note that other necessary steps that dynamically generating multiple cover blocks/stego blocks, the block-by-block coding/modification manner and the organization of coder control, etc, are not shown yet.
+Besides, more .c and .h files, such as x264.c/.h, macroblock_p.c/.h, common_p.c/.h, ratecontrol_p.c/.h, etc., are revised for the implementation of PTC.)
+We will update this project and tell following video steganographic researchers how to compile the project on window/vs, how to modify the source codes to make steganographic modules integrated into video compression (that is a tough job). 
 
 --embed.bat: contains a case of command line parameters, and double click it to run the embedding tool.
 
