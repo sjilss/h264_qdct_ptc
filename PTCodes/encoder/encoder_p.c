@@ -1489,7 +1489,7 @@ nextstate:
 }
 
 
-x264_t *copy_x264_t(x264_t *hd, x264_t *hs)
+x264_t *restore_context(x264_t *hd, x264_t *hs)
 {
 	//x264_t *hd;
 	//CHECKED_MALLOCZERO(hd, sizeof(x264_t));
@@ -2875,7 +2875,7 @@ static intptr_t x264_slice_write( x264_t *h )
 		for (int i = 0; i <numOfState; i++)
 		{
 			bs_init(&hx[i]->out.bs, hx[i]->out.p_bitstream, hx[i]->out.i_bitstream);
-			copy_x264_t(hx[i], h);
+			restore_context(hx[i], h);
 			bs_init(&hx_bkp[i]->out.bs, hx_bkp[i]->out.p_bitstream, hx_bkp[i]->out.i_bitstream);
 		}
 
@@ -3233,7 +3233,7 @@ static intptr_t x264_slice_write( x264_t *h )
 		{
 			if (enc[i])
 			{
-				copy_x264_t(h, hx[enc[i] - 1]);
+				restore_context(h, hx[enc[i] - 1]);
 				break;
 			}
 		}
