@@ -43,6 +43,7 @@ For extraction, We decode the 'walk_cif_stego.264' into a YUV data file while ex
 <b> 4.Input/Output file format </b><br/>
 <b> 5.Platform </b><br/>
 
+=========================================
 
 <b> 1.Compilation </b><br/>
 Windows
