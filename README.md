@@ -7,7 +7,7 @@ Author: Yu Wang. Email: wangyu9078@iie.ac.cn
 
 Note: from 2020-2-20 to 2020-3-1, we will continually update.
 
-(The project with full source codes will be posted upon the publication of our research).
+(The project with full source codes will be posted upon the publication/accepted of our research).
 
 <b> Publication </b><br/>
 Minimizing Embedding Impact for H.264 Steganography by Progressive Trellis Coding
