@@ -75,7 +75,7 @@ ptc-s.exe --fps 30 --profile baseline --level 3.0 --threads 1 --qp 28 --keyint 1
 
 3.2 Decoder/Extraction
 Test case:
-ldecod.exe -p InputFile=walk_cif_stego.264 -p OutputFile=walk_stego_dec.yuv -M ext-meg.txt -T messagetemp.txt
+ext-PTC.exe -p InputFile=walk_cif_stego.264 -p OutputFile=walk_stego_dec.yuv -M ext-meg.txt -T messagetemp.txt
 -p InputFile=stego video 
 -p OutputFile=decoded video
 -M messages retrieved
