@@ -7,7 +7,7 @@ Author: Yu Wang. Email: wangyu9078@iie.ac.cn
 
 Note: from 2020-2-20 to 2020-3-1, we will continually update.
 
-(The project with full source codes will be posted upon the publication/accepted of our research).
+The project with full source codes will be posted upon the publication/accepted of our research, for boosting video steganography.
 
 <b> Publication </b><br/>
 Minimizing Embedding Impact for H.264 Steganography by Progressive Trellis Coding
@@ -15,9 +15,10 @@ Minimizing Embedding Impact for H.264 Steganography by Progressive Trellis Codin
 
 <b> Files Explanation </b><br/>
 
---PTCodes (souce folder): contains all source codes. (Before research pulicaiton/accepted, we only provide a associate/necessary revised .c files, namely encoder_p.c, which includes ptrellis_coding, restore_context, x264_slice_write functions. If you are interested in the frame compression, look into the x264_slice_write function. If you are interested in coding contexts maintained, look into restore_context function. Last but not least, the progressive trellis coding process, that controls multiple coding contexts to expand paths, prune sub-optimal paths, match messages, and retrace short paths, is included in the ptrellis_coding function. Note that other necessary steps that dynamically generating multiple cover blocks/stego blocks, the block-by-block coding/modification manner and the organization of coder control, etc, are not shown yet.
-Besides, more .c and .h files, such as x264.c/.h, macroblock_p.c/.h, common_p.c/.h, ratecontrol_p.c/.h, etc., are revised for the implementation of PTC.)
-We will update this project and tell following video steganographic researchers how to compile the project on window/vs, how to modify the source codes to make steganographic modules integrated into video compression (that is a tough job). 
+--PTCodes (souce folder): contains all source codes. (Before research pulicaiton/accepted, we only provide a associate/necessary revised .c files, namely encoder_p.c, which includes ptrellis_coding, restore_context, x264_slice_write functions. If you are interested in the frame compression, look into the x264_slice_write function. If you are interested in coding contexts maintained, look into restore_context function. Last but not least, the progressive trellis coding process, that controls multiple coding contexts to expand paths, prune sub-optimal paths, match messages, and retrace short paths, is included in the ptrellis_coding function. 
+Note that other necessary steps that dynamically generating multiple cover blocks/stego blocks, the block-by-block coding/modification and the general coder control, etc, are not updated yet.
+Besides, more .c and .h files, such as x264.c/.h, macroblock_p.c/.h, common_p.c/.h, ratecontrol_p.c/.h, etc., are revised for the implementation of PTC.
+We will continually update this project and tell following video steganographic researchers how to compile the project on window/vs, how to modify the source codes to make steganographic modules integrated into video compression (that is a tough job). 
 
 --embed.bat: contains a case of command line parameters, and double click it to run the embedding tool.
 
@@ -42,7 +43,7 @@ For extraction, We decode the 'walk_cif_stego.264' into a YUV data file while ex
 1. double click 'video-decode.bat', to obtain a cover 'walk_cif_cover.yuv'.
 2. double click 'embed.bat', to embed 'ext-meg.txt' into 'walk_cif_cover.yuv', and obtain a stego 'walk_cif_stego.264'.
 3. double click 'extract.bat', to extract the secret message into 'ext-meg.txt' (a new generated file) from 'walk_cif_stego.264'.
-
+(Note: if users meet runtime erors, like missing .dll, etc, just be free to contact me, wangyu9078@iie.ac.cn.)
 =========================================
 
 <b> 1.Compilation </b><br/>
@@ -89,7 +90,7 @@ The output is an h.264 video stream.
 
 For message extraction tool:
 The source video material is an h.264 video stream.
-The output is raw YUV 4:2:0 data files..
+The output is raw YUV 4:2:0 data files.
 
 
 
