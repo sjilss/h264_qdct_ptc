@@ -1,4 +1,4 @@
-# h264_qdct_ptc 2020-2-20 
+# h264_qdct_ptc 
 
 In the 1.2.20 version, we provide the practical H.264 video embedding and extraction tools, and associate codes for explaining PTC in practice. 
  
@@ -9,11 +9,11 @@ Note: from 2020-2-20 to 2020-3-1, we will continually update.
 
 (The project with full source codes will be posted upon the publication of our research).
 
-# Publication
+<b> Publication </b><br/>
 Minimizing Embedding Impact for H.264 Steganography by Progressive Trellis Coding
 [Not be published]
 
-# Files Explanation
+<b> Files Explanation </b><br/>
 --embed.bat: contains a case of command line parameters, and double click it to run the embedding tool.
 
 --extract.bat: contains a case of command line parameters, and double click it to run the extraction tool.
@@ -31,32 +31,28 @@ modify messages inside arbitrarily.
 
 --walk_cif_cover.264: This is a H.264 video for test, 376 frames, 30 fps, qp=28,  baseline, GOP=10, 352x288.
 
-# quick overview of usage:
+<b> Quick overview of usage </b><br/>
 For embedding, first of all, we should decode 'walk_cif_cover.264' into raw YUV data file 'walk_cif_cover.yuv'. Next, compress it into a H.264 video stream 'walk_cif_stego.264' while embedding the 'meg.txt' using PTC-s.exe. 
 For extraction, We decode the 'walk_cif_stego.264' into a YUV data file while extracting the messages into the file 'ext-meg.txt'.
 
 =========================================
 
-# 1.Compilation
-# 2.Code explanation
-# 3.command line parameters
-# 4.Input/Output file format
-# 5.Platform
+<b> 1.Compilation </b><br/>
+<b> 2.Code explanation </b><br/>
+<b> 3.command line parameters </b><br/>
+<b> 4.Input/Output file format </b><br/>
+<b> 5.Platform
 
-========================================
 
-# 1.Compilation
+<b> 1.Compilation </b><br/>
 Windows
 MS Visual C++ 2013 or later
 
-=====================================================================
-
-# 2.Code explanation
+<b> 2.Code explanation </b><br/>
 (waiting for updates recently)
 
-=====================================================================
 
-# 3.command line parameters
+<b> 3.command line parameters </b><br/>
 3.1 Encoder/Embedding
 Test case:
 ptc-s.exe --fps 30 --profile baseline --level 3.0 --threads 1 --qp 28 --keyint 10 --input-res 352x288 --tune psnr --psnr --ssim --megfile meg.txt --tempfile 2temp.txt --seq 18 --pl 3 --embytes 0 -o walk_cif.264 walk_cif.yuv 
@@ -77,9 +73,8 @@ ldecod.exe -p InputFile=walk_cif.264 -p OutputFile=walk_dec.yuv -M ext-message.t
 -M messages retrieved
 -T temp file
 
-=====================================================================
 
-# 4.Input/Output file format
+<b> 4.Input/Output file format </b><br/>
 For message embedding tool:
 The source video material is read from raw YUV 4:2:0 data files.
 The output is an h.264 video stream.
@@ -88,9 +83,8 @@ For message extraction tool:
 The source video material is an h.264 video stream.
 The output is raw YUV 4:2:0 data files..
 
-=====================================================================
 
-# 5.Platform
+<b> 5.Platform </b><br/>
 (waiting for updates recently)
 
 
