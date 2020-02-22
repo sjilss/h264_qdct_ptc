@@ -13,6 +13,15 @@ The project with full source codes will be posted upon the publication/accepted 
 Minimizing Embedding Impact for H.264 Steganography by Progressive Trellis Coding
 [Not be published]
 
+<b> Quick overview of usage </b><br/>
+For embedding, first of all, we should decode 'walk_cif_cover.264' into raw YUV data file 'walk_cif_cover.yuv'. Next, compress it into a H.264 video stream 'walk_cif_stego.264' while embedding the 'meg.txt' using PTC-s.exe. 
+For extraction, We decode the 'walk_cif_stego.264' into a YUV data file while extracting the messages into the file 'ext-meg.txt'.
+
+1. double click 'video-decode.bat', to obtain a cover 'walk_cif_cover.yuv'.
+2. double click 'embed.bat', to embed 'ext-meg.txt' into 'walk_cif_cover.yuv', and obtain a stego 'walk_cif_stego.264'.
+3. double click 'extract.bat', to extract the secret message into 'ext-meg.txt' (a new generated file) from 'walk_cif_stego.264'.
+(Note: if users meet runtime erors, like missing .dll, etc, just be free to contact my email.)
+
 <b> Files Explanation </b><br/>
 
 --PTCodes (souce folder): contains all source codes. (Before research pulicaiton/accepted, we only provide a associate/necessary revised .c files, namely encoder_p.c, which includes ptrellis_coding, restore_context, x264_slice_write functions. If you are interested in the frame compression, look into the x264_slice_write function. If you are interested in coding contexts maintained, look into restore_context function. Last but not least, the progressive trellis coding process, that controls multiple coding contexts to expand paths, prune sub-optimal paths, match messages, and retrace short paths, is included in the ptrellis_coding function. 
@@ -37,13 +46,6 @@ modify messages inside arbitrarily.
 
 --walk_cif_cover.264: This is a H.264 video for test, 376 frames, 30 fps, qp=28,  baseline, GOP=10, 352x288.
 
-<b> Quick overview of usage </b><br/>
-For embedding, first of all, we should decode 'walk_cif_cover.264' into raw YUV data file 'walk_cif_cover.yuv'. Next, compress it into a H.264 video stream 'walk_cif_stego.264' while embedding the 'meg.txt' using PTC-s.exe. 
-For extraction, We decode the 'walk_cif_stego.264' into a YUV data file while extracting the messages into the file 'ext-meg.txt'.
-1. double click 'video-decode.bat', to obtain a cover 'walk_cif_cover.yuv'.
-2. double click 'embed.bat', to embed 'ext-meg.txt' into 'walk_cif_cover.yuv', and obtain a stego 'walk_cif_stego.264'.
-3. double click 'extract.bat', to extract the secret message into 'ext-meg.txt' (a new generated file) from 'walk_cif_stego.264'.
-(Note: if users meet runtime erors, like missing .dll, etc, just be free to contact me, wangyu9078@iie.ac.cn.)
 =========================================
 
 <b> 1.Compilation </b><br/>
