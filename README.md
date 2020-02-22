@@ -39,6 +39,9 @@ modify messages inside arbitrarily.
 <b> Quick overview of usage </b><br/>
 For embedding, first of all, we should decode 'walk_cif_cover.264' into raw YUV data file 'walk_cif_cover.yuv'. Next, compress it into a H.264 video stream 'walk_cif_stego.264' while embedding the 'meg.txt' using PTC-s.exe. 
 For extraction, We decode the 'walk_cif_stego.264' into a YUV data file while extracting the messages into the file 'ext-meg.txt'.
+1. double click 'video-decode.bat', to obtain a cover 'walk_cif_cover.yuv'.
+2. double click 'embed.bat', to embed 'ext-meg.txt' into 'walk_cif_cover.yuv', and obtain a stego 'walk_cif_stego.264'.
+3. double click 'extract.bat', to extract the secret message into 'ext-meg.txt' (a new generated file) from 'walk_cif_stego.264'.
 
 =========================================
 
@@ -46,22 +49,21 @@ For extraction, We decode the 'walk_cif_stego.264' into a YUV data file while ex
 <b> 2.Code explanation </b><br/>
 <b> 3.command line parameters </b><br/>
 <b> 4.Input/Output file format </b><br/>
-<b> 5.Platform </b><br/>
 
 =========================================
 
 <b> 1.Compilation </b><br/>
 Windows
 MS Visual C++ 2013 or later
+(waiting for updates recently)
 
 <b> 2.Code explanation </b><br/>
 (waiting for updates recently)
 
-
 <b> 3.command line parameters </b><br/>
 3.1 Encoder/Embedding
 Test case:
-ptc-s.exe --fps 30 --profile baseline --level 3.0 --threads 1 --qp 28 --keyint 10 --input-res 352x288 --tune psnr --psnr --ssim --megfile meg.txt --tempfile 2temp.txt --seq 18 --pl 3 --embytes 0 -o walk_cif.264 walk_cif.yuv 
+ptc-s.exe --fps 30 --profile baseline --level 3.0 --threads 1 --qp 28 --keyint 10 --input-res 352x288 --tune psnr --psnr --ssim --megfile meg.txt --tempfile 2temp.txt --seq 18 --pl 3 --embytes 0 -o walk_cif_stego.264 walk_cif_cover.yuv 
 
 --fps frame per second
 --qp quantization parameter
@@ -73,7 +75,7 @@ ptc-s.exe --fps 30 --profile baseline --level 3.0 --threads 1 --qp 28 --keyint 1
 
 3.2 Decoder/Extraction
 Test case:
-ldecod.exe -p InputFile=walk_cif.264 -p OutputFile=walk_dec.yuv -M ext-message.txt -T messagetemp.txt
+ldecod.exe -p InputFile=walk_cif_stego.264 -p OutputFile=walk_stego_dec.yuv -M ext-meg.txt -T messagetemp.txt
 -p InputFile=stego video 
 -p OutputFile=decoded video
 -M messages retrieved
@@ -89,9 +91,6 @@ For message extraction tool:
 The source video material is an h.264 video stream.
 The output is raw YUV 4:2:0 data files..
 
-
-<b> 5.Platform </b><br/>
-(waiting for updates recently)
 
 
 
