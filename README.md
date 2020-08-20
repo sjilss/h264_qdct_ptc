@@ -1,13 +1,14 @@
 # h264_qdct_ptc 
+<b> Timeline </b>
+From 2020-8-20: After the publication, we start to upload the entire source codes since the previous version is not complete.  
 
-In the 1.2.20 version, we provide the practical H.264 video embedding and extraction tools, and associate codes for explaining PTC in practice. 
- 
+From 2020-2-20 to 2020-3-1:
+In the 1.2.20 version, we provide the practical H.264 video embedding and extraction tools, and associate (partial) codes for explaining PTC in practice. 
+Note that the version is not the final and stable one.
+The project with full source codes will be posted upon the publication/accepted of our research, for boosting video steganography.
+
 If you have any question, or find bugs, no hesitate to contact the author.
 Author: Yu Wang. Email: wangyu9078@iie.ac.cn
-
-Note: from 2020-2-20 to 2020-3-1, we will continually update.
-
-The project with full source codes will be posted upon the publication/accepted of our research, for boosting video steganography.
 
 <b> Publication </b><br/>
 Minimizing Embedding Impact for H.264 Steganography by Progressive Trellis Coding
