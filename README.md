@@ -1,6 +1,9 @@
 # h264_qdct_ptc 
 <b> Timeline </b><br/>
-From 2020-8-20: After the publication, we start to upload the entire source codes since the previous version is not complete.  
+
+2020-9-3: The source codes are undergoing the security check. After the check, we will upload the missing source codes.
+
+2020-8-20: After the publication, we start to upload the entire source codes since the previous version is not complete.  
 
 From 2020-2-20 to 2020-3-1:
 In the 1.2.20 version, we provide the practical H.264 video embedding and extraction tools, and associate (partial) codes for explaining PTC in practice. 
