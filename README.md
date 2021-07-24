@@ -11,7 +11,7 @@ Note that the version is not the final and stable one.
 The project with full source codes will be posted upon the publication/accepted of our research, for boosting video steganography.
 
 If you have any question, or find bugs, no hesitate to contact the author.
-Author: Yu Wang. Email: wangyu9078@iie.ac.cn
+Author: Yu Wang. Email: ~~wangyu9078@iie.ac.cn~~ (This email has been withdrewed for the author's departure from IIE.)
 
 <b> Publication </b><br/>
 Minimizing Embedding Impact for H.264 Steganography by Progressive Trellis Coding
